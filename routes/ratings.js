@@ -18,7 +18,7 @@ router.post('/', authenticate, async (req, res) => {
   }
 
   try {
-    // Optional: prevent duplicate by upserting
+    //prevent duplicate by upserting
     const rating = await Rating.findOneAndUpdate(
       { userId, itemId },
       { value },
